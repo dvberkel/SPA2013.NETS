@@ -26,3 +26,4 @@ The repository uses submodules which need to be correctly initialized.
 
 [spa2013]: www.spaconference.org/spa2013/ "SPA 2013 homepage"
 [trello]: https://trello.com/board/spa2013-nets/51475e01c3b56fdf59001e44
+[deck]: http://imakewebthings.com/deck.js/ "Homepage of deck.js"
