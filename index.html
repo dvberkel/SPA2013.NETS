@@ -70,6 +70,37 @@
     </section>
 
     <section class="slide">
+      <h2>Neuron</h2>
+      <p>Simulates Biological Neuron</p>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="480" height="310">
+	<g stroke="black" stroke-width="2" fill="lightgray" font-family="monospace" font-size="20" text-anchor="middle">
+	  <defs>
+	    <marker id="triangle" viewBox="0 0 20 20" refX="20" refY="10" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+	      <path d="M 0 0 L 20 10 L 0 20 z"/>
+	    </marker>
+	  </defs>
+	  <rect x="10" y="10" width="50" height="50"/><text x="35" y="35">I0</text>
+	  <rect x="10" y="70" width="50" height="50"/><text x="35" y="95">I1</text>
+	  <rect x="10" y="130" width="50" height="50"/><text x="35" y="155">I2</text>
+	  <rect x="10" y="190" width="50" height="50"/><text x="35" y="215">I3</text>
+	  <rect x="10" y="250" width="50" height="50"/><text x="35" y="275">I4</text>
+
+	  <line x1="60" y1="35" x2="190" y2="135" marker-end="url(#triangle)"/><text x="125" y="85">w0</text>
+	  <line x1="60" y1="95" x2="190" y2="145" marker-end="url(#triangle)"/><text x="125" y="120">w1</text>
+	  <line x1="60" y1="155" x2="190" y2="155" marker-end="url(#triangle)"/><text x="125" y="155">w2</text>
+	  <line x1="60" y1="215" x2="190" y2="165" marker-end="url(#triangle)"/><text x="125" y="190">w3</text>
+	  <line x1="60" y1="275" x2="190" y2="175" marker-end="url(#triangle)"/><text x="125" y="225">w4</text>
+
+	  <rect x="190" y="95" width="120" height="120"/><text x="250" y="155">Σ wI > b</text>
+
+	  <line x1="310" y1="155" x2="430" y2="155" marker-end="url(#triangle)"/>
+
+	  <rect x="430" y="130" width="50" height="50"/><text x="455" y="155">O2</text>
+	</g>
+      </svg>
+    </section>
+
+    <section class="slide">
       <h2>Gallery</h2>
       <div class="gallery">
 	<div>
