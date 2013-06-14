@@ -43,3 +43,8 @@ NAND to (hint at a) simulate a computer.
 
 *** Discuss a network
 Network of neurons are a universal computer.
+
+** Learning
+*** Down we must go
+The short story demonstrates how you can find the lowest point by
+using only local information.

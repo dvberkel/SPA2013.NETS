@@ -1,0 +1,12 @@
+.adventure {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.adventure .content {
+    width: 600px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    padding: 15px;
+}

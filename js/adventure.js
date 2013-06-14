@@ -65,6 +65,7 @@
 	westButton.click(function(){ adventure.goWest(); });
 
 	var content = $('<div/>');
+	content.addClass('content');
 	new LocationView(content, adventure);
 
 	var eastButton = $('<button/>');
