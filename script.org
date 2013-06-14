@@ -1,0 +1,45 @@
+* Neural Nets
+** Agenda
+Nothing special
+** Who am I
+Welcome everybody, thank the organisation for inviting you. Introduce
+yourself. Tell a personal story.
+** Goals of the Day
+State the goal of the day.
+** Neuron
+Introduce the abstraction of a neuron. It is a simulation of a
+biologial neuron but has lost the intricate details.
+
+1. *Input states*. Values 0 and 1. Think of it as other neurons
+2. *weights*. Determines how much an input influences this neuron.
+3. *threshold*. Determines how sensitive this neuron is.
+4. *Input function. Aggregates the weighted input.
+5. *output*. Depends on the input function. Below threshold 0, above
+   threshold 1.
+*** Simulate a Neuron
+Develop a neuron that adheres the the above specification.
+
+After sufficient time. (Poll the participants) discuss the
+implementations.
+
+0. What language?
+1. Did you test? What method (TDD/BDD)? Which approach
+   (Inside-out/Outside-in)
+2. If I changed the logic of the output what changes do you have to
+   make?
+
+*** Discuss a Neuron
+Neurons are specified by there input function. But different
+functions produce the same behavior. It can be classified by
+introducing the plane seperating method.
+
+Apparently there are interesting functions (XOR) that are not
+representable by a single neuron.
+
+** Networks
+*** Develop a network
+Apparantly there neuron are not universal. But networks could be. Use
+NAND to (hint at a) simulate a computer.
+
+*** Discuss a network
+Network of neurons are a universal computer.
