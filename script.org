@@ -1,12 +1,12 @@
-* Neural Nets
-** Agenda
+#+TITLE Neural Nets
+* Agenda
 Nothing special
-** Who am I
+* Who am I
 Welcome everybody, thank the organisation for inviting you. Introduce
 yourself. Tell a personal story.
-** Goals of the Day
+* Goals of the Day
 State the goal of the day.
-** Neuron
+* Neuron
 Introduce the abstraction of a neuron. It is a simulation of a
 biologial neuron but has lost the intricate details.
 
@@ -16,7 +16,7 @@ biologial neuron but has lost the intricate details.
 4. *Input function. Aggregates the weighted input.
 5. *output*. Depends on the input function. Below threshold 0, above
    threshold 1.
-*** Simulate a Neuron
+** Simulate a Neuron
 Develop a neuron that adheres the the above specification.
 
 After sufficient time. (Poll the participants) discuss the
@@ -28,7 +28,7 @@ implementations.
 2. If I changed the logic of the output what changes do you have to
    make?
 
-*** Discuss a Neuron
+** Discuss a Neuron
 Neurons are specified by there input function. But different
 functions produce the same behavior. It can be classified by
 introducing the plane seperating method.
@@ -36,15 +36,78 @@ introducing the plane seperating method.
 Apparently there are interesting functions (XOR) that are not
 representable by a single neuron.
 
-** Networks
-*** Develop a network
+* Networks
+** Develop a network
 Apparantly there neuron are not universal. But networks could be. Use
 NAND to (hint at a) simulate a computer.
 
-*** Discuss a network
+** Discuss a network
 Network of neurons are a universal computer.
 
-** Learning
-*** Down we must go
+* Learning
+** Down we must go
 The short story demonstrates how you can find the lowest point by
 using only local information.
+
+** Teach a neuron
+We want to train a neuron to distinguish when a number =n= is
+divisible by =d=. As inputs to the neuron we will give it the binary
+digits of the number. We expect an output of =1= when =n= is divisible
+by =d= and =0= otherwise.
+
+First convert a number to binary. A general conversion code is
+presented below.
+
+#+begin_src javascript
+function convertToBase(n, base) {
+  var digits = [];
+  while (n !== 0) {
+    digits.push(n % base);
+    n = Math.floor(n / base);
+  }
+  return digits;
+}
+#+end_src
+
+With this function we can generate a set of numbers
+
+#+begin_src javascript
+var numberOfInputs = 5;
+var d = 3;
+base = 2;
+for (var n = 0; n < Math.pow(2, numberOfInputs); n++) {
+  console.log('%d %a %b', n, convertToBase(n, base), n % d);
+}
+#+end_src
+
+Use some a part to train the neuron with the following algorithm
+
+#+begin_src javascript :tangle snippits/divisibillity-pseudocode.js
+  var d = 3;
+  var ws = generateRandomWeightsFor(nunmberOfInputs);
+  var b = generateRandomThreshold();
+  var neuron = createNeuronWith(ws, b);
+  while (notSatisfied()) {
+      var n = pickTrainingTarget();
+      var is = convertToBase(n, 2);
+      var y = (n % d) ? 1 : 0;
+      var o = neuron.signal(is).output();
+      if (o !== y) {
+          ws = adjustWeights(is, y, ws, o);
+          b = adjustThreshold(is, y, b, o);
+      }
+      var neuron = createNeuronWith(ws, b);
+  }
+
+#+end_src
+
+Adjusting the weights with the following rules
+\[
+w'_{k} = w_{k} + \eta(y - o) \times \i_{k}
+\]
+
+and
+
+\[
+b'_{k} = b_{k} + \eta(y - o)
+\]
