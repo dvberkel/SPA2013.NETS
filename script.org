@@ -111,3 +111,6 @@ and
 \[
 b'_{k} = b_{k} + \eta(y - o)
 \]
+
+** Discuss Teach a Neuron
+Discuss the exprience of the past excercise
