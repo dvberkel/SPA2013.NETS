@@ -1,0 +1,18 @@
+.dragons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: yellow;
+    color: red;
+    font-weight: 900;
+    border-style: solid none !important;
+    border-color: black !important;
+    border-width: 2px !important;
+    padding: 5px 110px !important;
+    transform-origin: 100% 0%;
+    transform: rotate(45deg) translate(220px, 110px) ;
+}
+
+.dragons:before {
+    content: 'Here Be Dragons!'
+}
