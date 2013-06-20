@@ -114,4 +114,35 @@ b'_{k} = b_{k} + \eta(y - o)
 \]
 
 ** Discuss Teach a Neuron
-Discuss the exprience of the past excercise
+Discuss the exprience of the past excercise. Reiterate one the plane
+seperation properties of single neuron capabilities.
+
+** Teach a Network
+This is the most jarring step in the session. The promis of the
+considerations, which basically states: 'things are going to change'
+is specifically fullfilled here.
+
+*** Preliminaries
+The following steps need to be changed to adhere to training a
+network of neurons.
+
+1. Input &amp; Output can be real numbers (3.1415 or 2.7182)
+2. Change threshold function from sigma to g
+
+*** Threshold function
+Explain the details to the threshold function and its properties.
+
+#+begin_src javascript :tangle snippits/sigma.js
+function sigma(x) {
+    if (x < 0) {
+        return 0;
+    }
+    return 1;
+}
+#+end_src
+
+#+begin_src javascript :tangle snippits/g.js
+function g(x) {
+    return Math.exp(x)/(1 + Math.exp(x)*Math.exp(x));
+}
+#+end_src

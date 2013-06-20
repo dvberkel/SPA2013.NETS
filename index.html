@@ -184,9 +184,26 @@
     </section>
 
     <section class="slide">
+      <div class='dragons'></div>
       <h3>Learning</h3>
       <p><strong>Teach a Network!</strong></p>
-      <div class='dragons'/>
+      <p><strong>Prelimenaries</strong></p>
+      <ul>
+	<li>Input &amp; Output can be real numbers (3.1415 or 2.7182)</li>
+	<li>Change threshold function from sigma to g</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class='dragons'></div>
+      <h3>Learning</h3>
+      <p><strong>Teach a Network!</strong></p>
+      <p><strong>Threshold function</strong></p>
+      <p>Instead of</p>
+      <textarea id="sigma" data-snippit="sigma.js" name="sigma" class="code" mode="javascript" style="display: none;"></textarea>
+      <p>We will use</p>
+      <textarea id="g" data-snippit="g.js" name="g" class="code" mode="javascript" style="display: none;"></textarea>
+      <p><em>Notice that:</em><tt>g'(x) = g(x) * (1 - g(x))</tt></p>
     </section>
 
     <!-- deck.navigation snippet -->
