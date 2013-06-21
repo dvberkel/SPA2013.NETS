@@ -206,6 +206,51 @@
       <p><em>Notice that:</em><tt>g'(x) = g(x) * (1 - g(x))</tt></p>
     </section>
 
+    <section class="slide">
+      <div class='dragons'></div>
+      <h3>Learning</h3>
+      <p><strong>Teach a Network!</strong></p>
+      <p><strong>Hidden Layers</strong></p>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="850" height="620">
+	<g stroke="black" stroke-width="2" fill="lightgray" font-family="monospace" font-size="20" text-anchor="middle">
+	  <defs>
+	    <marker id="triangle" viewBox="0 0 20 20" refX="20" refY="10" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+	      <path d="M 0 0 L 20 10 L 0 20 z"/>
+	    </marker>
+	  </defs>
+	  <rect x="10" y="10" width="50" height="50"/><text x="35" y="35">I0</text>
+	  <rect x="10" y="125" width="50" height="50"/><text x="35" y="150">I1</text>
+	  <rect x="10" y="210" width="50" height="50"/><text x="35" y="235">I2</text>
+	  <rect x="10" y="342" width="50" height="50"/><text x="35" y="367">I3</text>
+	  <rect x="10" y="455" width="50" height="50"/><text x="35" y="480">I4</text>
+
+	  <line x1="60" y1="35" x2="190" y2="135" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="150" x2="190" y2="145" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="235" x2="190" y2="155" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="367" x2="190" y2="165" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="480" x2="190" y2="175" marker-end="url(#triangle)"/>
+
+	  <line x1="60" y1="35" x2="190" y2="290" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="150" x2="190" y2="300" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="235" x2="190" y2="310" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="367" x2="190" y2="320" marker-end="url(#triangle)"/>
+	  <line x1="60" y1="480" x2="190" y2="330" marker-end="url(#triangle)"/>
+
+	  <rect x="190" y="95" width="120" height="120"/><text x="250" y="155">Σ wI > b</text>
+	  <rect x="190" y="250" width="120" height="120"/><text x="250" y="310">Σ wI > b</text>
+
+	  <line x1="310" y1="155" x2="430" y2="225" marker-end="url(#triangle)"/>
+	  <line x1="310" y1="315" x2="430" y2="235" marker-end="url(#triangle)"/>
+
+	  <rect x="430" y="170" width="120" height="120"/><text x="490" y="235">Σ wI > b</text>
+
+	  <line x1="550" y1="230" x2="645" y2="230" marker-end="url(#triangle)"/>
+
+	  <rect x="645" y="205" width="50" height="50"/><text x="670" y="230">O0</text>
+	</g>
+      </svg>
+    </section>
+
     <!-- deck.navigation snippet -->
     <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
     <a href="#" class="deck-next-link" title="Next">&#8594;</a>
