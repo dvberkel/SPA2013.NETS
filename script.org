@@ -154,3 +154,9 @@ With the new neuron we look at a configuration with a hidden layer
 that should be trained.
 
 Expressive power increases. But how should we update?
+
+*** Updating
+The update function is 'derivable' by considering steepest descent
+for the =g= function.
+
+It is remarkable similar to updating a neuron.

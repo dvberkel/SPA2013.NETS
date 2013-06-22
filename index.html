@@ -163,7 +163,7 @@
       <h3>Learning</h3>
       <p><strong>Teach a Neuron!</strong></p>
       <p>Teach a neuron to distinguish divisibillity by <tt>d</tt></p>
-      <ul>
+     <ul>
 	<li><tt>ws[i] = ws[i] + η * (y - o) * is[i];</tt></li>
 	<li><tt>b = b + η * (y - o)</tt></li>
       </ul>
@@ -191,6 +191,7 @@
       <ul>
 	<li>Input &amp; Output can be real numbers (3.1415 or 2.7182)</li>
 	<li>Change threshold function from sigma to g</li>
+	<li>Ignore the threshold</li>
       </ul>
     </section>
 
@@ -236,19 +237,57 @@
 	  <line x1="60" y1="367" x2="190" y2="320" marker-end="url(#triangle)"/>
 	  <line x1="60" y1="480" x2="190" y2="330" marker-end="url(#triangle)"/>
 
-	  <rect x="190" y="95" width="120" height="120"/><text x="250" y="155">g(wI - b)</text>
-	  <rect x="190" y="250" width="120" height="120"/><text x="250" y="310">g(wI - b)</text>
+	  <rect x="190" y="95" width="120" height="120"/><text x="250" y="155">g(wI)</text>
+	  <rect x="190" y="250" width="120" height="120"/><text x="250" y="310">g(wI)</text>
 
 	  <line x1="310" y1="155" x2="430" y2="225" marker-end="url(#triangle)"/>
 	  <line x1="310" y1="315" x2="430" y2="235" marker-end="url(#triangle)"/>
 
-	  <rect x="430" y="170" width="120" height="120"/><text x="490" y="235">g(wI - b)</text>
+	  <rect x="430" y="170" width="120" height="120"/><text x="490" y="235">g(wI)</text>
 
 	  <line x1="550" y1="230" x2="645" y2="230" marker-end="url(#triangle)"/>
 
 	  <rect x="645" y="205" width="50" height="50"/><text x="670" y="230">O0</text>
 	</g>
       </svg>
+    </section>
+
+    <section class="slide">
+      <div class='dragons'></div>
+      <h3>Learning</h3>
+      <p><strong>Teach a Network!</strong></p>
+      <p>We are going to consider one hidden layer, with one output</p>
+      <div>
+	<h4>Notation</h4>
+	<h5>Names</h5>
+	<ul>
+	  <li><tt>I<sub>i</sub></tt> for the inputs</li>
+	  <li><tt>Z<sub>j</sub></tt> for the hidden neuron</li>
+	  <li><tt>O</tt> for the output neuron</li>
+	</ul>
+	<h5>Weights</h5>
+	<ul>
+	  <li>From <tt>I<sub>i</sub></tt> to <tt>Z<sub>j</sub></tt>: <tt>u<sub>ji</sub></tt></li>
+	  <li>From <tt>Z<sub>j</sub></tt> to <tt>O</tt>: <tt>v<sub>j</sub></tt></li>
+	</ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class='dragons'></div>
+      <h3>Learning</h3>
+      <p><strong>Teach a Network!</strong></p>
+      <p>Teach a network to distinguish divisibillity by <tt>d</tt></p>
+      <ul>
+	<li><tt>u'<sub>ji</sub> = u<sub>ji</sub> + η * I<sub>i</sub> * δ<sub>Zi</sub></tt></li>
+	<li><tt>v'<sub>j</sub> = v<sub>j</sub> + η * Z<sub>i</sub> * δ<sub>O</sub></tt></li>
+      </ul>
+      <p>where</p
+      <ul>
+	<li><tt>δ<sub>Zi</sub> = g'(Z<sub>j</sub>) * v<sub>j</sub> * δ<sub>O</sub></tt></li>
+	<li><tt>δ<sub>O</sub> = g'(O) * (Y - O)</tt></li>
+	<li><tt>g'(x) = g(x) * (1 - g(x))</tt></li>
+      </ul>
     </section>
 
     <!-- deck.navigation snippet -->
